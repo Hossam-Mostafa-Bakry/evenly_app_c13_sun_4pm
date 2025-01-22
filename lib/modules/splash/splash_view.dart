@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:evently_app_c13_sun_4_pm/core/constants/app_assets.dart';
+import 'package:evently_app_c13_sun_4_pm/core/extensions/size_ext.dart';
 import 'package:evently_app_c13_sun_4_pm/core/routes/pages_route_name.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +38,7 @@ class _SplashViewState extends State<SplashView> {
           children: [
             Image.asset(
               AppAssets.eventlyLogo,
-              height: mediaQuery.size.height * 0.25,
+              height: 0.25.height,
             ),
           ],
         ),
