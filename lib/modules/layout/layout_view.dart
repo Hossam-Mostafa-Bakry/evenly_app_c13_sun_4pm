@@ -1,5 +1,6 @@
 import 'package:evently_app_c13_sun_4_pm/core/theme/app_theme_manager.dart';
 import 'package:evently_app_c13_sun_4_pm/core/theme/color_palette.dart';
+import 'package:evently_app_c13_sun_4_pm/modules/layout/home_tab.dart';
 import 'package:flutter/material.dart';
 
 class LayoutView extends StatefulWidget {
@@ -11,11 +12,17 @@ class LayoutView extends StatefulWidget {
 
 class _LayoutViewState extends State<LayoutView> {
   int selectedIndex = 0;
+  List<Widget> tabs=[
+    const HomeTab(),
+    const Scaffold(),
+    const SizedBox(),
+    const Scaffold(),
+    const Scaffold(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         shape: const CircleBorder(
@@ -66,6 +73,7 @@ class _LayoutViewState extends State<LayoutView> {
           ),
         ],
       ),
+      body: tabs[selectedIndex],
     );
   }
 

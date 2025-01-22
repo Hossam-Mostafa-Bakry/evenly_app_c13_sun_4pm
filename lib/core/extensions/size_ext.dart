@@ -8,4 +8,8 @@ extension Responsive on num {
 
   double get width =>
       MediaQuery.of(navigatorKey.currentContext!).size.width * this;
+
+  Widget get spaceVertical => SizedBox(height: toDouble());
+
+  Widget get spaceHorizontal => SizedBox(width: toDouble());
 }
