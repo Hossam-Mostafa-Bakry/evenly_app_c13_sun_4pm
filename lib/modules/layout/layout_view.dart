@@ -1,3 +1,4 @@
+import 'package:evently_app_c13_sun_4_pm/core/theme/app_theme_manager.dart';
 import 'package:flutter/material.dart';
 
 class LayoutView extends StatelessWidget {
@@ -5,6 +6,8 @@ class LayoutView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return  Scaffold(
+      backgroundColor: Colors.red,
+    );
   }
 }

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:evently_app_c13_sun_4_pm/core/routes/pages_route_name.dart';
 import 'package:evently_app_c13_sun_4_pm/modules/forgetPassword/forget_password_view.dart';
 import 'package:evently_app_c13_sun_4_pm/modules/layout/layout_view.dart';
@@ -9,6 +11,7 @@ import 'package:flutter/material.dart';
 
 abstract class AppRoutes {
   static Route onGeneratedRoute(RouteSettings settings) {
+    log('Route: ${settings.name}');
     switch (settings.name) {
       case PagesRouteName.initial:
         return MaterialPageRoute(
