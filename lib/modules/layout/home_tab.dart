@@ -1,11 +1,11 @@
 import 'package:evently_app_c13_sun_4_pm/core/extensions/extensions.dart';
 import 'package:evently_app_c13_sun_4_pm/core/theme/color_palette.dart';
+import 'package:evently_app_c13_sun_4_pm/core/widgets/custom_teb_bar_item.dart';
 import 'package:evently_app_c13_sun_4_pm/modules/layout/widgets/category_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../core/widgets/custom_elveted_button.dart';
-import 'widgets/btn_nav_bar_item.dart';
 
 class HomeTab extends StatelessWidget {
   const HomeTab({super.key});
@@ -146,7 +146,7 @@ class HomeTab extends StatelessWidget {
         8.spaceVertical,
         Expanded(
           child: ListView.separated(
-            padding: EdgeInsets.zero,
+            padding: const EdgeInsets.symmetric(horizontal: 16),
             itemCount: 10,
             itemBuilder: (context, index) {
               return const CategoryCard();

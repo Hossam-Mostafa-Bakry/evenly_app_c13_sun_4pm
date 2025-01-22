@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:evently_app_c13_sun_4_pm/core/routes/pages_route_name.dart';
+import 'package:evently_app_c13_sun_4_pm/modules/create_event/create_event_screen.dart';
 import 'package:evently_app_c13_sun_4_pm/modules/forgetPassword/forget_password_view.dart';
 import 'package:evently_app_c13_sun_4_pm/modules/layout/layout_view.dart';
 import 'package:evently_app_c13_sun_4_pm/modules/onBoarding/on_boarding_view.dart';
@@ -46,7 +47,6 @@ abstract class AppRoutes {
             settings: settings,
           );
         }
-
       case PagesRouteName.layout:
         {
           return MaterialPageRoute(
@@ -54,7 +54,13 @@ abstract class AppRoutes {
             settings: settings,
           );
         }
-
+      case PagesRouteName.createEvent:
+        {
+          return MaterialPageRoute(
+            builder: (context) => const CreateEventScreen(),
+            settings: settings,
+          );
+        }
       default:
         return MaterialPageRoute(
           builder: (context) => const SplashView(),

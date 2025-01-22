@@ -1,3 +1,5 @@
+import 'package:evently_app_c13_sun_4_pm/core/extensions/context_extension.dart';
+import 'package:evently_app_c13_sun_4_pm/core/routes/pages_route_name.dart';
 import 'package:evently_app_c13_sun_4_pm/core/theme/app_theme_manager.dart';
 import 'package:evently_app_c13_sun_4_pm/core/theme/color_palette.dart';
 import 'package:evently_app_c13_sun_4_pm/modules/layout/home_tab.dart';
@@ -12,7 +14,7 @@ class LayoutView extends StatefulWidget {
 
 class _LayoutViewState extends State<LayoutView> {
   int selectedIndex = 0;
-  List<Widget> tabs=[
+  List<Widget> tabs = [
     const HomeTab(),
     const Scaffold(),
     const SizedBox(),
@@ -32,7 +34,7 @@ class _LayoutViewState extends State<LayoutView> {
           ),
         ),
         backgroundColor: ColorPalette.primaryColor,
-        onPressed: () {},
+        onPressed: () => context.goToNamed(PagesRouteName.createEvent),
         child: const Icon(
           Icons.add,
           size: 30,
